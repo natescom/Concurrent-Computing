@@ -1,0 +1,7 @@
+.toggle-button {
+    -fx-background-color: green;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: #3CB371; // MediumSeaGreen
+}

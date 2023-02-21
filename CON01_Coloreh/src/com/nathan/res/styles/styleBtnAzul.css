@@ -1,0 +1,7 @@
+.toggle-button {
+    -fx-background-color: blue;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: #6495ED; // CornFlower
+}

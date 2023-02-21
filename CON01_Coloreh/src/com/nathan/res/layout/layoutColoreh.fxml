@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="250.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nathan.FxmlController">
+      <Label fx:id="lblScoreValue" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="79.0" text="Score: 0" />
+      <Label fx:id="lblRoundValue" layoutX="14.0" layoutY="29.0" prefHeight="17.0" prefWidth="79.0" text="Round: 0" />
+      <Button fx:id="btnVerde" disable="true" layoutX="23.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnOnClick" prefHeight="25.0" prefWidth="31.0" styleClass="toggle-button" stylesheets="@../styles/styleBtnVerde.css" />
+      <Button fx:id="btnVermelho" disable="true" layoutX="74.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnOnClick" prefHeight="25.0" prefWidth="31.0" styleClass="toggle-button" stylesheets="@../styles/styleBtnVermelho.css" />
+      <Button fx:id="btnAmarelo" disable="true" layoutX="177.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnOnClick" prefHeight="25.0" prefWidth="31.0" styleClass="toggle-button" stylesheets="@../styles/styleBtnAmarelo.css" />
+      <Button fx:id="btnAzul" disable="true" layoutX="222.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnOnClick" prefHeight="25.0" prefWidth="31.0" styleClass="toggle-button" stylesheets="@../styles/styleBtnAzul.css" />
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="48.0" layoutY="174.0" prefHeight="17.0" prefWidth="180.0" text="Bem-vindo ao Coloreh" textAlignment="CENTER" />
+      <Button fx:id="btnComoJogar" layoutX="177.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnOnClick" text="Como jogar" />
+      <Button fx:id="btnIniciar" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnOnClick" prefHeight="25.0" prefWidth="131.0" text="Iniciar" />
+</AnchorPane>

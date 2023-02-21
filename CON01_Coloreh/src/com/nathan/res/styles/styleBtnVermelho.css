@@ -1,0 +1,7 @@
+.toggle-button {
+    -fx-background-color: Red;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: #FF6347; // Tomato
+}

@@ -1,0 +1,30 @@
+.list-view .list-cell:even {
+    -fx-background-color: transparent;
+}
+.list-view .list-cell:odd {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-color: red;
+}
+
+.scroll-bar .thumb {
+    -fx-color: red;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-color: red;
+}
+
+.list-cell {
+    -fx-padding: 3px;
+    -fx-background-radius: 20;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="702.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nathan.utils.Controller">
+   <children>
+      <Button fx:id="btn_start" layoutX="27.0" layoutY="474.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="83.0" text="Iniciar" />
+      <ImageView fx:id="img_DuckTrain" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/kettletrailmon.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_ArmadilloTrain" fitHeight="150.0" fitWidth="200.0" layoutX="433.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/moletrailmon.gif" />
+         </image>
+      </ImageView>
+      <Polyline fill="#ffffff00" layoutX="150.0" layoutY="290.0" points="434.66668701171875, -71.66667175292969, 375.0, -71.66665649414062, 330.5, -24.0, 247.0, -24.0, 207.33334350585938, -71.66667175292969, 123.33334350585938, -71.66667175292969, 84.5, -24.0, 4.3333282470703125, -24.0, -38.0, -71.66665649414062, -94.66666412353516, -71.66667175292969" strokeLineCap="BUTT" strokeLineJoin="BEVEL" />
+      <Polyline fill="#ffffff00" layoutX="150.0" layoutY="290.0" points="433.66668701171875, 20.0, 372.5, 20.0, 330.5, -24.0, 247.5, -24.0, 212.66665649414062, 20.0, 124.33334350585938, 20.0, 85.0, -24.0, 4.3333282470703125, -24.0, -37.5, 20.0, -91.66667175292969, 20.0" strokeLineCap="BUTT" strokeLineJoin="BEVEL" />
+      <Label layoutX="144.0" layoutY="229.0" text="Tunel Frei Beijamin" />
+      <Label layoutX="404.0" layoutY="236.0" text="Tunel Olivia" />
+      <Label layoutX="58.0" layoutY="328.0" text="Linha: C01" />
+      <Label layoutX="293.0" layoutY="328.0" text="Linha: C02" />
+      <Label layoutX="516.0" layoutY="328.0" text="Linha: C03" />
+      <Label layoutX="59.0" layoutY="179.0" text="Linha: M01" />
+      <Label layoutX="291.0" layoutY="179.0" text="Linha: M02" />
+      <Label layoutX="511.0" layoutY="179.0" text="Linha: M03" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66ff67" height="25.0" layoutX="13.0" layoutY="205.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6978ff" height="25.0" layoutX="577.0" layoutY="205.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6978ff" height="25.0" layoutX="11.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66ff67" height="25.0" layoutX="578.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+      <Label layoutX="12.0" layoutY="302.0" text="End Line" />
+      <Label layoutX="582.0" layoutY="300.0" text="Station" />
+      <Label layoutX="578.0" layoutY="209.0" text="End Line" />
+      <Label layoutX="17.0" layoutY="209.0" text="Station" />
+      <Ellipse fx:id="ico_armadillo" fill="#f894d9" layoutX="605.0" layoutY="311.0" radiusX="11.0" radiusY="11.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="ico_duck" fill="#ffc91f" layoutX="28.0" layoutY="218.0" radiusX="11.0" radiusY="11.0" stroke="BLACK" strokeType="INSIDE" />
+      <TitledPane animated="false" layoutX="26.0" layoutY="505.0" prefHeight="181.0" prefWidth="158.0" text="Tamanho das linhas">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="156.0">
+               <children>
+                  <Text layoutX="6.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linha M01: 50 trilhos          Linha M02: 50 trilhos          Linha M03: 50 trilhos          Tunel Frei: 100 trilhos         Tunel Olivia: 100 trilhos      Linha C01: 50 trilhos            Linha C02: 50 trilhos            Linha C03: 50 trilhos" wrappingWidth="149.5000018775463" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="204.0" layoutY="544.0" prefHeight="142.0" prefWidth="215.0" text="Controle de velocidade">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="256.0">
+               <children>
+                  <Slider fx:id="sld_DuckTrain" layoutX="11.0" layoutY="28.0" onMouseDragged="#onMouseDragged" prefHeight="14.0" prefWidth="189.0" />
+                  <Slider fx:id="sld_ArmadilloTrain" layoutX="11.0" layoutY="69.0" onMouseDragged="#onMouseDragged" prefHeight="14.0" prefWidth="189.0" />
+                  <Label layoutX="9.0" layoutY="10.0" text="DuckTrain" />
+                  <Label layoutX="8.0" layoutY="48.0" text="ArmadilloTrain" />
+                  <Label layoutX="37.0" layoutY="93.0" text="t/s - Trilhos por segundo" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="439.0" layoutY="504.0" prefHeight="181.0" prefWidth="189.0" text="Detalhes">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lbl_speed_armadillo" layoutX="26.0" layoutY="101.0" text="Velocidade: 2 t/s" />
+                  <Label fx:id="lbl_speed_duck" layoutX="25.0" layoutY="27.0" text="Velocidade: 4 t/s" />
+                  <Label layoutX="13.0" layoutY="10.0" text="DuckTrain:" />
+                  <Label layoutX="10.0" layoutY="83.0" text="ArmadilloTrain:" />
+                  <Label layoutX="27.0" layoutY="43.0" text="Inicio: M01" />
+                  <Label layoutX="27.0" layoutY="60.0" text="Fim: M03" />
+                  <Label layoutX="27.0" layoutY="117.0" text="Inicio: C03" />
+                  <Label layoutX="27.0" layoutY="133.0" text="Fim: C01" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Line fx:id="line_img_routeX" endX="263.0" layoutX="170.0" layoutY="377.0" startX="-151.0" visible="false" />
+      <Line fx:id="line_ico_routeX" endX="585.5" endY="8.0" layoutX="19.0" layoutY="258.0" startX="9.5" startY="8.0" visible="false" />
+      <Line fx:id="line_ico_routeY" endX="69.5" endY="36.0" layoutX="34.0" layoutY="275.0" startX="69.5" startY="-57.666656494140625" visible="false" />
+      <ImageView fx:id="img_flagboyTF01" fitHeight="92.0" fitWidth="110.0" layoutX="102.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/bandeiraboyparado.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_flagboyTF02" fitHeight="92.0" fitWidth="110.0" layoutX="182.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/bandeiraboyparado.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_flagboyTO01" fitHeight="92.0" fitWidth="110.0" layoutX="343.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/bandeiraboyparado.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_flagboyTO02" fitHeight="92.0" fitWidth="110.0" layoutX="431.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/bandeiraboyparado.gif" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="cbx_Algoritmo" layoutX="202.0" layoutY="506.0" prefHeight="25.0" prefWidth="215.0" />
+   </children>
+</AnchorPane>

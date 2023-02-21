@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane_janela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nathan.util.Controller">
+   <children>
+      <Button fx:id="btn_iniciar" layoutX="257.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="200.0" text="Entrar na aula" />
+      <TitledPane layoutX="257.0" layoutY="36.0" prefHeight="287.0" prefWidth="200.0" text="Atividades">
+         <content>
+            <ListView fx:id="listView_atividades" prefHeight="200.0" prefWidth="200.0" />
+         </content></TitledPane>
+      <AnchorPane id="pane_prof" layoutX="14.0" layoutY="5.0" prefHeight="222.0" prefWidth="214.0">
+         <children>
+            <Slider fx:id="sld_prof" layoutX="7.0" layoutY="337.0" onMouseDragged="#onMouseDragged" prefHeight="14.0" prefWidth="200.0" />
+            <ProgressBar fx:id="pgrb_prof" layoutX="7.0" layoutY="26.0" prefHeight="18.0" prefWidth="200.0" progress="0.0" />
+            <ImageView fx:id="img_prof" fitHeight="162.0" fitWidth="179.0" layoutX="14.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Prof_01.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_ensinando_prof" layoutX="7.0" layoutY="295.0" prefHeight="17.0" prefWidth="200.0" text="Ensinando: ..." />
+            <Label fx:id="lbl_temporestante_prof" layoutX="7.0" layoutY="7.0" prefHeight="17.0" prefWidth="100.0" text="Termino em: ..." />
+            <Label fx:id="lbl_porcent_prof" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="7.0" prefHeight="17.0" prefWidth="37.0" text="0%" textAlignment="RIGHT" />
+            <Label fx:id="lbl_tamanho_prof" layoutX="7.0" layoutY="312.0" prefHeight="17.0" prefWidth="100.0" text="Tamanho: ..." />
+            <Label fx:id="lbl_speed_prof" alignment="CENTER_RIGHT" layoutX="106.0" layoutY="312.0" prefHeight="17.0" prefWidth="100.0" text="Velocidade: 1" />
+            <Label fx:id="lbl_quantidade_prof" alignment="CENTER" layoutX="56.0" layoutY="53.0" prefHeight="17.0" prefWidth="100.0" text="Professores: 1" />
+            <Button fx:id="btn_prof_minus" layoutX="7.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="37.0" text="-" />
+            <Button fx:id="btn_prof_plus" layoutX="170.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="37.0" text="+" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="495.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Slider fx:id="sld_al" layoutX="2.0" layoutY="330.0" onMouseDragged="#onMouseDragged" prefHeight="14.0" prefWidth="200.0" />
+            <ProgressBar fx:id="pgrb_al" layoutX="2.0" layoutY="19.0" prefHeight="18.0" prefWidth="200.0" progress="0.0" />
+            <ImageView fx:id="img_al" fitHeight="174.0" fitWidth="200.0" layoutX="2.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Al_0A.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_estudando_al" layoutX="2.0" layoutY="288.0" prefHeight="17.0" prefWidth="200.0" text="Estudando: ..." />
+            <Label fx:id="lbl_temporestante_al" layoutX="2.0" prefHeight="17.0" prefWidth="100.0" text="Termino em: ..." />
+            <Label fx:id="lbl_porcent_al" alignment="CENTER_RIGHT" layoutX="165.0" prefHeight="17.0" prefWidth="37.0" text="0%" textAlignment="RIGHT" />
+            <Label fx:id="lbl_tamanho_al" layoutX="2.0" layoutY="305.0" prefHeight="17.0" prefWidth="100.0" text="Tamanho: ...." />
+            <Label fx:id="lbl_speed_al" alignment="CENTER_RIGHT" layoutX="102.0" layoutY="305.0" prefHeight="17.0" prefWidth="100.0" text="Velocidade: 1" />
+            <Label fx:id="lbl_quantidade_al" alignment="CENTER" layoutX="52.0" layoutY="46.0" prefHeight="17.0" prefWidth="100.0" text="Alunos: 1" />
+            <Button fx:id="btn_al_minus" layoutX="2.0" layoutY="43.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="37.0" text="-" />
+            <Button fx:id="btn_al_plus" layoutX="165.0" layoutY="43.0" mnemonicParsing="false" onAction="#onClick" prefHeight="25.0" prefWidth="37.0" text="+" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_prof" layoutX="24.0" layoutY="396.0" prefHeight="224.0" prefWidth="325.0">
+        <columns>
+          <TableColumn fx:id="tableColumn_prof_person" prefWidth="26.0" resizable="false" text="ID" />
+          <TableColumn fx:id="tableColumn_prof_lesson" prefWidth="123.0" resizable="false" text="Ensinando" />
+            <TableColumn fx:id="tableColumn_prof_size" prefWidth="60.0" resizable="false" text="Tamanho" />
+            <TableColumn fx:id="tableColumn_prof_speed" prefWidth="74.0" resizable="false" text="Velocidade" />
+            <TableColumn fx:id="tableColumn_prof_percent" prefWidth="41.0" resizable="false" text="\%" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_al" layoutX="379.0" layoutY="396.0" prefHeight="224.0" prefWidth="325.0">
+         <columns>
+            <TableColumn fx:id="tableColumn_al_person" prefWidth="24.0" resizable="false" text="ID" />
+            <TableColumn fx:id="tableColumn_al_lesson" prefWidth="124.0" resizable="false" text="Estudando" />
+            <TableColumn fx:id="tableColumn_al_size" prefWidth="72.0" resizable="false" text="Tamanho" />
+            <TableColumn fx:id="tableColumn_al_speed" prefWidth="67.0" resizable="false" text="Velocidade" />
+            <TableColumn fx:id="tableColumn_al_percent" prefWidth="37.0" resizable="false" text="\%" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
